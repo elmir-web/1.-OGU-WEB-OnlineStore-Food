@@ -70,7 +70,17 @@ class ProductController {
     }
 
     async deleteOne(req, res) {
+        const {id} = req.params;
+        const product = await Product.findOne(
+            {
+                where: {id},
+                include: [{model: ProductInfo, as: 'info'}]
+            },
+        );
 
+        product.destroy();
+
+        return res.json({message: `Товар номер ${id} успешно удален`});
     }
 }
 
