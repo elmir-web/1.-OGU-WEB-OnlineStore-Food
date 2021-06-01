@@ -3,7 +3,10 @@ import {Button, Card, Col, Container, Image, Row} from "react-bootstrap";
 import bigStar from '../assets/bigStar.png'
 import {useParams} from 'react-router-dom'
 import {fetchOneProduct} from "../http/productAPI";
+<<<<<<< HEAD
 import {ADMIN_ROUTE} from "../utils/consts";
+=======
+>>>>>>> 3935791e7bdb84f722eb4aed74d48ec57639e468
 
 const ProductPage = () => {
     const [product, setProduct] = useState({info: []});
@@ -36,11 +39,14 @@ const ProductPage = () => {
                     >
                         <h3>От: {product.price} руб.</h3>
                         <Button variant={"outline-dark"}>Добавить в корзину</Button>
+<<<<<<< HEAD
                         <Button variant={"outline-dark"} onClick={
                             () => {
                                 // location = location.href+"product/delete/"+product.id;
                             }
                         }>Удалить</Button>
+=======
+>>>>>>> 3935791e7bdb84f722eb4aed74d48ec57639e468
                     </Card>
                 </Col>
             </Row>
